@@ -84,7 +84,8 @@ Example:
 let num1 = +prompt("Enter a number", 0);
 let num2 = +prompt("Enter another number", 0);
 
-let comparison = num1 == num2;
-if (comparison || null || undefined) {
+if (isNaN(num1) || isNaN(num2)) {
   alert("Enter a valid number");
+} else {
+  alert(num1 === num2);
 }
