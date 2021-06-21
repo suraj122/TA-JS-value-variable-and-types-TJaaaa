@@ -79,18 +79,21 @@
   - `Salary > 50000` tax is 30 %
 
 */
-// let salary = +prompt("Enter your salary", 0);
-// let inHand;
-// if (salary <= 20000) {
-//   inHand = salary - (salary * 10) / 100;
-//   alert(inHand);
-// } else if (salary <= 40000) {
-//   inHand = salary - (salary * 20) / 100;
-//   alert(inHand);
-// } else {
-//   inHand = salary - (salary * 30) / 100;
-//   alert(inHand);
-// }
+let salary = +prompt("Enter your salary", 0);
+
+switch (true) {
+  case salary <= 20000:
+    alert(`Your inhand salary is ${salary - (salary * 10) / 100}`);
+    break;
+  case salary <= 40000:
+    alert(`Your inhand salary is ${salary - (salary * 20) / 100}`);
+    break;
+  case salary < 50000:
+    alert(`Your inhand salary is ${salary - (salary * 30) / 100}`);
+    break;
+  default:
+    alert("Enter a Valid salary");
+}
 
 //  if..else vs switch
 
